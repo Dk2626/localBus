@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -13,6 +13,7 @@ import { AdMobBanner, AdMobInterstitial } from 'expo-ads-admob';
 import IconUser from '@expo/vector-icons/FontAwesome5';
 import IconMobile from '@expo/vector-icons/FontAwesome';
 import IconMail from '@expo/vector-icons/Ionicons';
+import IconLogout from '@expo/vector-icons/MaterialIcons';
 
 const UserScreen = () => {
   const { user, setUser, setIsLogin } = useContext(AuthContext);
@@ -42,11 +43,13 @@ const UserScreen = () => {
         backgroundColor: '#fff',
       }}>
       <TouchableOpacity
+        style={{ alignSelf: 'flex-end' }}
+        onPress={() => remove()}>
+        <IconLogout name='logout' size={27} color='#fa8231' />
+      </TouchableOpacity>
+      <TouchableOpacity
         style={{
-          borderRadius:
-            Math.round(
-              Dimensions.get('window').width + Dimensions.get('window').height
-            ) / 2,
+          borderRadius: 100,
           width: Dimensions.get('window').width * 0.4,
           height: Dimensions.get('window').width * 0.4,
           backgroundColor: '#fa8231',
@@ -58,6 +61,7 @@ const UserScreen = () => {
           {name.slice(0, 1).toUpperCase()}
         </Text>
       </TouchableOpacity>
+
       <View style={{ alignItems: 'center', marginVertical: 15 }}>
         <Text style={{ fontSize: 20, fontFamily: 'Andika' }}>User</Text>
         <IconUser
@@ -92,19 +96,7 @@ const UserScreen = () => {
           inevitablecoders@gmail.com
         </Text>
       </View>
-      <TouchableOpacity
-        style={{
-          backgroundColor: '#fa8231',
-          paddingVertical: 20,
-          paddingHorizontal: 40,
-          borderRadius: 20,
-          marginTop: 30,
-        }}
-        onPress={() => remove()}>
-        <Text style={{ color: '#fff', fontSize: 20, fontFamily: 'Macondo' }}>
-          Logout
-        </Text>
-      </TouchableOpacity>
+
       <View style={{ position: 'absolute', bottom: 80 }}>
         <AdMobBanner
           bannerSize='smartBannerPortrait'

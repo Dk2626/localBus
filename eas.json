@@ -1,0 +1,31 @@
+{
+  "cli": {
+    "version": ">= 0.52.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {},
+    "apk": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "apk1": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "apk2": {
+      "developmentClient": true
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

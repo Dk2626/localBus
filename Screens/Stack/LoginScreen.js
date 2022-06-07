@@ -182,7 +182,7 @@ const LoginScreen = () => {
             borderRadius: 20,
           }}>
           <Text style={{ color: '#fff', fontSize: 20, fontFamily: 'Macondo' }}>
-            Login
+            Register
           </Text>
         </TouchableOpacity>
       </View>

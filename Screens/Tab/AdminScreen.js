@@ -207,6 +207,7 @@ const AdminScreen = () => {
                 })
               }
               value={data}
+              autoCapitalize='characters'
             />
             <TouchableOpacity
               style={{

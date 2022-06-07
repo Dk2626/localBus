@@ -1,12 +1,12 @@
 import * as firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDPA1lZJ4F9mSj_ZurKXnAVijSUZOp7riI',
-  authDomain: 'localbus-8bd79.firebaseapp.com',
-  projectId: 'localbus-8bd79',
-  storageBucket: 'localbus-8bd79.appspot.com',
-  messagingSenderId: '854920363097',
-  appId: '1:854920363097:web:860e9b42c3a2a370cd8548',
+  apiKey: 'AIzaSyAMgy9cc5xciNxG9BMyQG4b718iI1-bQ9Y',
+  authDomain: 'travelon-22f65.firebaseapp.com',
+  projectId: 'travelon-22f65',
+  storageBucket: 'travelon-22f65.appspot.com',
+  messagingSenderId: '367671707283',
+  appId: '1:367671707283:web:19614f911281939bacef66',
 };
 
 let app;
